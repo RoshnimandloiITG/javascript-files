@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dark {
+            /* background-color: black; */
+            color: white;
+            background-image: url("https://w0.peakpx.com/wallpaper/282/749/HD-wallpaper-blue-clouds-and-the-moon.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* margin: auto; */
+            width: 100%;
+            height: 620px;
+        }
+
+        .dark label {
+            font-size: 28px;
+            color: #afd2db;
+            font-weight: bold;
+        }
+
+        .dark #label {
+            font-size: 24px;
+            background: #afd2db;
+            color: white;
+            padding: 20px;
+            outline: thick ridge blanchedalmond;
+        }
+
+        .dark input#inputBox {
+            padding: 17px 17px;
+            text-align: center;
+            background: #afd2db;
+            color: white;
+            border: 4px outset #afd2db;
+            /* outline: none; */
+        }
+
+        .dark h1 {
+            color: #afd2db;
+        }
+
+        .dark .content button {
+            margin: 13px;
+            padding: 11px 64px;
+            background: #afd2db;
+            color: white;
+            border: 5px outset #afd2db;
+        }
+
+        .dark p#mypara {
+            background: #afd2db;
+            color: white;
+            padding: 18px 44px;
+            border: 5px outset #afd2db;
+        }
+
+        .dark #btn {
+            padding: 5px 15px;
+            border: 3px outset #c0d9e7;
+            /* font-weight: bold; */
+            /* font-style: italic; */  
+            /* font-size: 24px; */
+            /* border: none; */
+            color: black;
+            background: #c0d9e7;
+            border-radius: 59px;
+            margin: 10px;
+        }
+
+        #btn {
+            padding: 6px 15px;
+            /* font-weight: bold; */
+            /* font-style: italic; */
+            /* font-size: 15px; */
+            /* border: none; */
+            background: #daabdb;
+            border-radius: 73px;
+            border: 2px inset #daabdb;
+            margin: 10px;
+        }
+
+        .light {
+            color: black;
+            background-image: url("https://images.stockcake.com/public/4/8/7/487e545c-4e5f-4189-b285-2a6184e6fe33_large/sunrise-cloudy-sky-stockcake.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 638px;
+        }
+
+        .content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: anchor-center;
+            text-align: center;
+            justify-content: center;
+            margin-top: 8%;
+        }
+
+        h1 {
+            color: #633885;
+        }
+
+        p#mypara {
+            color: white;
+            padding: 10px 50px;
+            background: #daabdb;
+            border: 2px inset #daabdb;
+        }
+
+        input#inputBox {
+            padding: 11px;
+            text-align: center;
+            background: #daabdb;
+            color: white;
+            border: 2px inset #daabdb;
+            outline: none;
+        }
+
+        .content button {
+            margin: 13px;
+            padding: 11px 64px;
+            background: #daabdb;
+            color: white;
+            border: 2px inset #daabdb;
+        }
+
+        #label {
+            font-size: 24px;
+            background: cadetblue;
+            color: black;
+            padding: 20px;
+            outline: thick ridge powderblue;
+        }
+
+        label {
+            font-size: 16px;
+            color: #633885;
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 29px;
+            align-items: baseline;
+        }
+
+        .card {
+            display: flex;
+            gap: 39px;
+            align-items: anchor-center;
+        }
+
+        input[type="checkbox"] {
+            width: 23px;
+            height: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="light">
+        <button onclick="toggleClass()" id="btn">DARK</button>
+        <!-- heading -->
+        <div class="content">
+
+
+            <h1> Text Formatting and manipulation operations</h1>
+            <!-- for enterng a text -->
+            <!-- <label for="inputBox" id="label">WRITE SOMETHING HERE</label> <br> -->
+            <input type="text" id="inputBox" name="para" placeholder="WRITE SOMETHING HERE">
+            <!-- button tag -->
+            <button onclick="clickText()">Add</button>
+            <!-- paragraph -->
+            <p class="para" id="mypara"></p>
+            <!-- for bold -->
+            <div class="card">
+                <div class="boxes">
+                    <div>
+                        <input type="checkbox" id="bold" name="text" onclick="clickText()">
+                        <label for="bold">BOLD</label>
+                    </div>
+                    <!-- for italic -->
+                    <div>
+
+                        <input type="checkbox" id="Italic" name="text" onclick="clickText()">
+                        <label for="Italic">ITALIC</label> <br>
+                    </div>
+                </div>
+                <!-- for uppercase -->
+                <div class="boxes">
+                    <div>
+
+                        <input type="checkbox" id="Uppercase" name="text" onclick="clickText()">
+                        <label for="Uppercase">UPPERCASE</label>
+                    </div>
+                    <!-- for lowercase -->
+                    <div>
+
+                        <input type="checkbox" id="Lowercase" name="text" onclick="clickText()">
+                        <label for="Lowercase">LOWRECASE</label><br>
+                    </div>
+                </div>
+                <!-- for colorchange -->
+                <div class="boxes">
+                    <div>
+
+                        <input type="color" id="ChangeTextColor" name="text" onclick="clickText()">
+                        <label for="ChangeTextColor">CHANGE TEXT COLOR</label>
+                    </div>
+                    <!-- for capital -->
+                    <div>
+
+                        <input type="checkbox" id="CapitalizeEachWord " name="text" onclick="clickText()">
+                        <label for="CapitalizeEachWord ">CAPITALIZE EACH WORD</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleClass() {
+            let btn = document.getElementById("btn")
+            let box = document.getElementById("container");
+            if (box.classList.contains("dark")) {
+                box.classList.add("light")
+                box.classList.remove("dark");
+                btn.innerHTML = "DARK";
+            } else {
+                // Agar class nahi hai, to add kar do
+                box.classList.remove("light")
+                box.classList.add("dark");
+                btn.innerHTML = "LIGHT"
+            }
+        }
+
+
+
+
+
+
+
+
+        //          let val = document.getElementById("container")
+        // function modes() {
+        //     if(val.classList.contains("light"))
+        //     val.classList.toggle("dark");
+        // else{
+        //     val.classList.toggle("light");
+        // }
+        function clickText() {
+            let input = document.getElementById("inputBox");
+            let myPara = document.getElementById("mypara");
+            myPara.innerText = input.value;
+            let checkbox = document.querySelectorAll("input")
+            //    for bold
+            if (checkbox[1].checked) {
+                myPara.style.fontWeight = "bold";
+            }
+            else {
+                myPara.style.fontWeight = "400";
+            }
+            //   for italic
+            if (checkbox[2].checked) {
+                myPara.style.fontStyle = "italic";
+            }
+            else {
+                myPara.style.fontStyle = "normal";
+            }
+            //   for upper case
+            if (checkbox[3].checked) {
+                myPara.innerText = myPara.innerText.toUpperCase();
+            }
+            //   for lower case
+            if (checkbox[4].checked) {
+                myPara.innerText = myPara.innerText.toLowerCase();
+            }
+            myPara.style.color = checkbox[5].value;
+            // if (checkbox[5].checked) {
+            //     myPara.style.color = "green";
+            // }
+            // else {
+            //     myPara.style.color = "black";
+            // }
+            if (checkbox[6].checked) {
+                let arr2 = [];
+                let arr = myPara.innerText.split(" ");
+                for (let i of arr) {
+                    for (let x in i) {
+                        if (x == 0) {
+                            let y = i[x].toUpperCase();
+                            arr2.push(y + i.slice(1, i.length))
+                        }
+                    }
+                }
+                myPara.innerText = arr2.join(" ")
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
